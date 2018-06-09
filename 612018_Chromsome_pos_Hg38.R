@@ -40,7 +40,20 @@ sigs.input = mut.to.sigs.input(mut.ref = Test14.1, sample.id = "Sample",
 chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
 BSgenome.Hsapiens.UCSC.hg38)
 
+Test15.1 <- as.data.frame(Test15)
+sigs.input = mut.to.sigs.input(mut.ref = Test15.1, sample.id = "Sample",
+chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
+BSgenome.Hsapiens.UCSC.hg38)
 
+Test16.1 <- as.data.frame(Test16)
+sigs.input = mut.to.sigs.input(mut.ref = Test16.1, sample.id = "Sample",
+chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
+BSgenome.Hsapiens.UCSC.hg38)
+
+Test17.1 <- as.data.frame(Test17)
+sigs.input = mut.to.sigs.input(mut.ref = Test16.1, sample.id = "Sample",
+chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
+BSgenome.Hsapiens.UCSC.hg38)
 
 
 
