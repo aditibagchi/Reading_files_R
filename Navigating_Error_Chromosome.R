@@ -238,6 +238,37 @@ MB-REC-01:chr22:19719682:C:A
 #' "GL000245.1" -> "chrUn_gl000245"; etc.
 #' 
 ## Next step will be to remove all errors while using HG38 and check if the context is right. 
+## Next step will be to remove all errors while using HG38 and check if the context is right.
 
+##remval of all the bases that doesnot match context
+
+ 
+Test8_Remove_Context_HG19 <- read_csv("~/Desktop/Initial Screen/Reading_files_R/Test8(Remove)Context_HG19.csv")
+ View(Test8_Remove_Context_HG19)
+ Test8.1.2<- as.data.frame(Test8_Remove_Context_HG19)
+sigs.input = mut.to.sigs.input(mut.ref = Test8.1.2, sample.id = "Sample",
+chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
+BSgenome.Hsapiens.UCSC.hg19)
+
+Test9.1.2<- as.data.frame(Test9_Remove_Context_HG19)
+sigs.input = mut.to.sigs.input(mut.ref = Test9.1.2, sample.id = "Sample",
+                               chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
+                                 BSgenome.Hsapiens.UCSC.hg19)
+View(sigs.input)
+
+whichSignatures(tumor.ref = sigs.input, 
+                +                 signatures.ref = signatures.nature2013, 
+                +                 sample.id = "MB-REC-01", 
+                +                 contexts.needed = TRUE,
+                +                 tri.counts.method = 'default')
+
+example <- whichSignatures(tumor.ref = sigs.input,
+signatures.ref = signatures.nature2013,
+sample.id = "MB-REC-01",
+contexts.needed = TRUE,
+tri.counts.method = 'default')
+plotSignatures(example, sub = 'example')
+makePie(example)
+plotSignatures(example, sub = 'example')
 
 
