@@ -171,6 +171,7 @@ BSgenome.Hsapiens.UCSC.hg19)
 
 ##Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 5250: 'allow.nonnarrowing' is FALSE and the supplied start (112020245) is > refwidth + 1
+  solving row 5250: 'allow.nonnarrowing' isFALSE and the supplied start (112020245) is > refwidth + 1
 ##chromosome16
 Test4.1 <- as.data.frame(Test4)
 sigs.input = mut.to.sigs.input(mut.ref = Test4.1, sample.id = "Sample",
@@ -178,9 +179,11 @@ chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
 BSgenome.Hsapiens.UCSC.hg19)
 ## Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 5862: 'allow.nonnarrowing' is FALSE and the supplied start (190198043) is > refwidth + 1
+  solving row 5862: 'allow.nonnarrowing'is FALSE and the supplied start (190198043) is > refwidth + 1
 
 ##Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 5862: 'allow.nonnarrowing' is FALSE and the supplied start (190198043) is > refwidth + 1
+  solving row 5862: 'allow.nonnarrowing'isFALSE and the supplied start (190198043) is > refwidth + 1
 
 Test5.1 <- as.data.frame(Test5)
 sigs.input = mut.to.sigs.input(mut.ref = Test5.1, sample.id = "Sample",
@@ -189,12 +192,14 @@ BSgenome.Hsapiens.UCSC.hg19)
 
 ##Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 6069: 'allow.nonnarrowing' is FALSE and the supplied start (142605829) is > refwidth + 1
+  solving row 6069: 'allow.nonnarrowing' isFALSEand the supplied start (142605829) is > refwidth + 1
 Test6.1 <- as.data.frame(Test6)
 sigs.input = mut.to.sigs.input(mut.ref = Test6.1, sample.id = "Sample",
 chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
 BSgenome.Hsapiens.UCSC.hg19)
 ## Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 6069: 'allow.nonnarrowing' is FALSE and the supplied start (142646715) is > refwidth + 1
+  solving row 6069: 'allow.nonnarrowing' isFALSEand the supplied start (142646715) is > refwidth + 1
 
 Test7.1 <- as.data.frame(Test7)
 sigs.input = mut.to.sigs.input(mut.ref = Test7.1, sample.id = "Sample",
@@ -202,6 +207,7 @@ chr = "chr", pos = "pos", ref = "ref", alt = "alt", bsg =
 BSgenome.Hsapiens.UCSC.hg19)
 ##Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
   solving row 6069: 'allow.nonnarrowing' is FALSE and the supplied start (142898579) is > refwidth + 1
+  solving row 6069: 'allow.nonnarrowing' isFALSE and the supplied start (142898579) is > refwidth + 1
 
 Test8.1 <- as.data.frame(Test8)
 sigs.input = mut.to.sigs.input(mut.ref = Test8.1, sample.id = "Sample",
@@ -212,8 +218,18 @@ BSgenome.Hsapiens.UCSC.hg19)
 In mut.to.sigs.input(mut.ref = Test8.1, sample.id = "Sample", chr = "chr",  :
   Check ref bases -- not all match context:
   MB-REC-01:chr7:33037788:T:G, MB-REC-01:chr9:57493:C:G, MB-REC-01:chr9:58177:C:T, MB-REC-01:chr9:65293:G:A, MB-REC-01:chr13:10286:G:T, MB-REC-01:chr13:12515:C:T, MB-REC-01:chr13:12495:G:C, MB-REC-01:chr13:76949:C:T, MB-REC-01:chr13:127964:G:A, MB-REC-01:chr13:149501:C:T, MB-REC-01:chr14:39319:C:A, MB-REC-01:chr17:187629:C:T, MB-REC-01:chr21:121157:C:G, MB-REC-01:chr21:121158:G:T, MB-REC-01:chr21:143455:G:T, MB-REC-01:chr21:153390:C:T, MB-REC-01:chr22:39552:A:C, MB-REC-01:chr22:34863:C:A, MB-REC-01:chr22:28264:T:C, MB-REC-01:chr22:32050:T:G, MB-REC-01:chr22:33013:A:G, MB-REC-01:chr22:20884:A:C, MB-REC-01:chr22:49195800:A:C, MB-REC-01:chr22:19237933:A:G, MB-REC-01:chr22:19719682:C:A
+  MB-REC-01:chr7:33037788:T:G, MB-REC-01:chr9:57493:C:G, MB-REC-01:chr9:58177:C:T, 
+MB-REC-01:chr9:65293:G:A, MB-REC-01:chr13:10286:G:T, MB-REC-01:chr13:12515:C:T,
+MB-REC-01:chr13:12495:G:C, MB-REC-01:chr13:76949:C:T, MB-REC-01:chr13:127964:G:A,
+MB-REC-01:chr13:149501:C:T, MB-REC-01:chr14:39319:C:A, MB-REC-01:chr17:187629:C:T,
+MB-REC-01:chr21:121157:C:G, MB-REC-01:chr21:121158:G:T, MB-REC-01:chr21:143455:G:T, 
+MB-REC-01:chr21:153390:C:T, MB-REC-01:chr22:39552:A:C, MB-REC-01:chr22:34863:C:A, 
+MB-REC-01:chr22:28264:T:C, MB-REC-01:chr22:32050:T:G, MB-REC-01:chr22:33013:A:G, 
+MB-REC-01:chr22:20884:A:C, MB-REC-01:chr22:49195800:A:C, MB-REC-01:chr22:19237933:A:G, 
+MB-REC-01:chr22:19719682:C:A
 ## The context sequence is taken from the BSgenome.Hsapiens.UCSC.hgX::Hsapiens 
 #' object. Therefore the coordinates must correspond to the human hgX assembly. 
+#' object.Thereforethe coordinates must correspond to the human hgX assembly. 
 #' Default is set to the UCSC hg19 assembly, which corresponds to the GRCh37 
 #' assembly. If another assembly is required, it must already be present in the 
 #' R workspace and fed as a parameter. This method will translate chromosome 
