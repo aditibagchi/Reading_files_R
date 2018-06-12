@@ -1,4 +1,15 @@
+library("maftools", lib.loc="/Library/Frameworks/R.framework/Versions/3.4/Resources/library")
+Maf_example <- read.maf(maf = "~/Desktop/Data_Files/EGAD00001000946_reduced_maf_final.txt")
+trinucleotideMatrix(Maf_example, ref_genome = "~/Desktop/Data_Files/Ref_Genome/ucsc.hg19.fasta.txt", prefix = NULL, add = TRUE,
+                    ignoreChr = NULL, useSyn = TRUE, fn = NULL)
 
+##Error
+reading ~/Desktop/Data_Files/Ref_Genome/ucsc.hg19.fasta.txt (this might take few minutes)..
+Extracting 5' and 3' adjacent bases..
+Error in .Call2("solve_user_SEW", refwidths, start, end, width, translate.negative.coord,  : 
+                  solving row 272681: 'allow.nonnarrowing' is FALSE and the supplied start (149004580) is > refwidth + 1
+                
+                
 ##Using DeconstructsSigs Package to identify mutational signatures 
 ## Does the MAF file read right using maftools
 MB_REC_01_maf <- read.maf(maf = "~/Desktop/Data_Files/newmaf_files/MB-REC-01_new.maf.txt")
@@ -374,5 +385,6 @@ MB-REC-01 0.01233546 0.0221616 0.003962498 0.001162102 -0.001309794 0.001105524
 
 $unknown
 [1] 0.1803541
+
 
 
