@@ -386,5 +386,6 @@ MB-REC-01 0.01233546 0.0221616 0.003962498 0.001162102 -0.001309794 0.001105524
 $unknown
 [1] 0.1803541
 
+write.csv(sigs.input, "sigs_input_exampe.csv")
 
 
